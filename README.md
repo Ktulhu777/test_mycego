@@ -25,17 +25,18 @@ DJANGO YANDEX DISK
    ```
 
 2. **Добавьте в файл .env необходимые переменные окружения**:
-   ```
+```
   SECRET_KEY=your_secret_key
   YANDEX_TOKEN=your_yandex_token
-  ```
+```
+  
 3. **Запустите проект**:
-  ```
+```
   docker-compose up --build
-  ```
+```  
 
 4. **Откройте приложение**:
-  ```
+```
   http://localhost:8000
-  ```
+```
 
