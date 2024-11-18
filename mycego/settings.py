@@ -9,7 +9,7 @@ environ.Env.read_env(env_file=Path('./.env'))
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')  # django-insecure-7mp7@i8%htld7sg3to*jk3t$hm)#j@c@18t5zj8t3bbwkwcprs
 YANDEX_TOKEN = env('YANDEX_TOKEN')
 
 # SECURITY WARNING: don't run with debug turned on in production!
