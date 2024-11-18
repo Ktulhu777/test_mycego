@@ -19,10 +19,10 @@ DJANGO YANDEX DISK
 
 1. **Склонируйте репозиторий**:
 
-   ```
+```
    git clone https://github.com/Ktulhu777/test_mycego.git
    cd test_mycego
-   ```
+```
 
 2. **Добавьте в файл .env необходимые переменные окружения**:
 ```
