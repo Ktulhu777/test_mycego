@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'disk/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>File list</h1>
+        </header>
+        <nav>
+            <form method="get" class="filter-form">
+                <div class="filter-container">
+                    <label for="file-type">Filter by type:</label>
+                    <div class="filter-select">
+                        <select name="media_type" id="file-type">
+                            <option value="all">All Files</option>
+                            {% for type in file_types %}
+                                <option value="{{ type }}" {% if request.GET.type == type %}selected{% endif %}>{{ type|capfirst }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="filter-button">Apply</button>
+                </div>
+            </form>
+        </nav>
+        <main>
+            <div class="file-list">
+                {% if name_file %}
+                    {% for file in name_file %}
+                        <div class="file-item">
+                            <img src="media/default/{{ file.media_type }}_icon.png" alt="{{ file.name }}">
+                            <span class="file-name">{{ file.name }}</span>
+                            <a href="{{ file.file }}" download class="download-link">Download</a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No files available for this filter.</p>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* Общие стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #707b7c; /* Серый фон */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Контейнер для элементов */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы фильтрации */
+.filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Стили для метки */
+.filter-form label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* Стили для выпадающего списка */
+.filter-select select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-select select:hover {
+    border-color: #4CAF50;
+}
+
+/* Стили для кнопки фильтрации */
+.filter-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для каждого элемента (файла) */
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.file-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Стили для текста (имя файла) */
+.file-item span {
+    font-size: 18px;
+    color: #333;
+    flex-grow: 1;
+}
+
+/* Стили для ссылки (ссылка на скачивание) */
+.file-item a {
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.file-item a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Стили для разделителей */
+.file-item:last-child {
+    border-bottom: none;
+}

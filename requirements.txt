@@ -1,0 +1,7 @@
+django
+django-environ==0.10.0
+yadisk
+redis
+hiredis
+gunicorn
+requests
